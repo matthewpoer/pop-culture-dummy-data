@@ -31,7 +31,7 @@ foreach($files as $file){
   $output .= ');';
 
   // write out the file
-  $handle = fopen($type . '.php','w+');
+  $handle = fopen('output/' . $type . '.php','w+');
   fwrite($handle, $output);
   fclose($handle);
 }
