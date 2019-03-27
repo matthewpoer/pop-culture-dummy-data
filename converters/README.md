@@ -18,3 +18,32 @@ $company = array(
   ),
 );
 ```
+
+## Golang
+`convert.go` reads both `company.csv` and `person.csv` and creates Golang Structs and Maps from each, placing the output in `company.go` and `person.go`. The output files reference a common `package dummydata`. Run the script like `go run converters/convert.go`.
+
+The output will look like:
+```
+package dummydata
+
+type Company struct {
+	AccountName  string
+	AccountEmail string
+	Website      string
+}
+
+var companyData map[string]Company
+
+func buildCompanyData() {
+	companyData["Merry Melodies"] = Company{
+		AccountName:  "Merry Melodies",
+		AccountEmail: "hello@merrymelodies.com",
+		Website:      "http://merrymelodies.com",
+	}
+	companyData["The Muppet Show"] = Company{
+		AccountName:  "The Muppet Show",
+		AccountEmail: "info@muppetshow.org",
+		Website:      "http://muppetshow.org",
+	}
+}
+```
