@@ -2,7 +2,7 @@
 Most tools and spreadsheet applications will natively open CSV files, but what if you need your data in JSON? or a PHP array? This directory contains scripts to help with that.
 
 ## PHP
-`convert.php` reads both `company.csv` and `person.csv` and creates PHP associative arrays from each, placing the output in `company.php` and `person.php`. Run the script like `php -f converters/convert.php`
+`php-arrays.php` reads both `company.csv` and `person.csv` and creates PHP associative arrays from each, placing the output in `company.php` and `person.php`. Run the script like `php -f converters/php-arrays.php`
 
 The output will look like:
 ```
@@ -20,7 +20,7 @@ $company = array(
 ```
 
 ## Golang
-`convert.go` reads both `company.csv` and `person.csv` and creates Golang Structs and Maps from each, placing the output in `company.go` and `person.go`. The output files reference a common `package dummydata`. Run the script like `go run converters/convert.go`.
+`golang-dummydata-maps.go` reads both `company.csv` and `person.csv` and creates Golang Structs and Maps from each, placing the output in `company.go` and `person.go`. The output files reference a common `package dummydata`. Run the script like `go run golang-dummydata-maps.go`.
 
 The output will look like:
 ```
